@@ -28,7 +28,7 @@ var config = {
 
   registryPort: 7001,
   webPort: 7002,
-  bindingHost: '127.0.0.1', // only binding on 127.0.0.1 for local access
+  bindingHost: '42.192.37.59', // only binding on 42.192.37.59 for local access
   // default is ctx.protocol
   protocol: '',
   // When sync package, cnpm not know the access protocol.
@@ -122,14 +122,14 @@ var config = {
   database: {
     db: 'cnpmjs',
     username: 'root',
-    password: 'huihui0302',
+    password: '',
 
     // the sql dialect of the database
     // - currently supported: 'mysql', 'sqlite', 'postgres', 'mariadb'
     dialect: 'mysql',
 
-    // custom host; default: 127.0.0.1
-    host: '127.0.0.1',
+    // custom host; default: 42.192.37.59
+    host: 'rm-8vbh6cf3mfulpa660qo.mysql.zhangbei.rds.aliyuncs.com',
 
     // custom port; default: 3306
     port: 3306,
@@ -173,7 +173,7 @@ var config = {
   unpublishRemoveTarball: true,
 
   // registry url name
-  registryHost: '127.0.0.1:7001',
+  registryHost: '42.192.37.59:7001',
 
   /**
    * registry mode config
@@ -249,7 +249,7 @@ var config = {
   syncDownloadOptions: {
     // formatRedirectUrl: function (url, location)
   },
-  handleSyncRegistry: 'http://127.0.0.1:7001',
+  handleSyncRegistry: 'http://42.192.37.59:7001',
 
   // default badge subject
   badgeSubject: 'cnpm',
