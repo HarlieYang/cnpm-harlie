@@ -83,7 +83,7 @@ var config = {
 
   // default system admins
   admins: {
-    // name: email
+    harlie: 'yanghui3021@163.com',
     fengmk2: 'fengmk2@gmail.com',
     admin: 'admin@cnpmjs.org',
     dead_horse: 'dead_horse@qq.com',
@@ -120,13 +120,13 @@ var config = {
    */
 
   database: {
-    db: 'cnpmjs_test',
+    db: 'cnpmjs',
     username: 'root',
-    password: '',
+    password: 'huihui0302',
 
     // the sql dialect of the database
     // - currently supported: 'mysql', 'sqlite', 'postgres', 'mariadb'
-    dialect: 'sqlite',
+    dialect: 'mysql',
 
     // custom host; default: 127.0.0.1
     host: '127.0.0.1',
@@ -173,7 +173,7 @@ var config = {
   unpublishRemoveTarball: true,
 
   // registry url name
-  registryHost: 'r.cnpmjs.org',
+  registryHost: '127.0.0.1:7001',
 
   /**
    * registry mode config
@@ -182,10 +182,12 @@ var config = {
   // enable private mode or not
   // private mode: only admins can publish, other users just can sync package from source npm
   // public mode: all users can publish
+// 是否允许所有人发布，true表示只有管理员才能发布，其他用户可以同步。false表示任何人
+// 不管是 true 和 false 项目还是必须带有私有标示
   enablePrivate: false,
 
   // registry scopes, if don't set, means do not support scopes
-  scopes: [ '@cnpm', '@cnpmtest', '@cnpm-test' ],
+  scopes: [ '@harlie','@cnpm', '@cnpmtest', '@cnpm-test' ],
 
   // some registry already have some private packages in global scope
   // but we want to treat them as scoped private packages,
@@ -221,7 +223,7 @@ var config = {
   // none: do not sync any module, proxy all public modules from sourceNpmRegistry
   // exist: only sync exist modules
   // all: sync all modules
-  syncModel: 'none', // 'none', 'all', 'exist'
+  syncModel: 'exist', // 'none', 'all', 'exist'
   // sync package.json/dist-tag.json to sync dir
   syncBackupFiles: false,
 
